@@ -62,4 +62,66 @@ Then run your notebook or classifier.py </br>
 
 ## API Docs 
 
-{{SOON IMPLEMENTED}}
+Here's a sample request to the API:
+
+```bash
+curl -X POST "http://127.0.0.1:8000/predict/" -H  "accept: application/json" -H  "Content-Type: application/json" -d "{\"text\":\"Menteri Ketenagakerjaan Ida Fauziyah mengatakan, untuk melindungi   Pekerja  Migran Indonesia (PMI), kuncinya adalah sinergitas dan kolaborasi seluruh pihak.\"}"
+```
+
+or, if you using python:
+
+```sh
+import requests
+
+myText = "{\"text\":\"Menteri Ketenagakerjaan Ida Fauziyah mengatakan, untuk melindungi   Pekerja  Migran Indonesia (PMI), kuncinya adalah sinergitas dan kolaborasi seluruh pihak.\"}"
+url = "http://127.0.0.1:8000/predict/"
+response = requests.post(url, data=myText)
+print(response.json())
+```
+
+The response you'll get looks something like this:
+
+```js
+{
+  "text": "Menteri Ketenagakerjaan Ida Fauziyah mengatakan, untuk melindungi   Pekerja  Migran Indonesia (PMI), kuncinya adalah sinergitas dan kolaborasi seluruh pihak.",
+  "prediction": {
+    "category": [
+      {
+        "label": "business",
+        "conf": "87.66"
+      }
+    ],
+    "sentiment": [
+      {
+        "label": "neutral",
+        "conf": "99.34"
+      }
+    ]
+  }
+}
+```
+
+## The backbone of our REST API will be:
+
+FastAPI - lets you easily set up a REST API (some say it might be fast, too)
+
+Uvicorn - server that lets you do async programming with Python (pretty cool)
+
+Pydantic - data validation by introducing types for our request and response data.
+
+
+
+## Installation
+
+Clone this repo:
+
+```sh
+git clone https://github.com/shabri-arrahim/newsclassifier.git
+cd newsclassifier
+```
+
+Install the prerequisites:
+
+```sh
+pip install requirements.txt
+```
