@@ -116,8 +116,8 @@ Pydantic - data validation by introducing types for our request and response dat
 Clone this repo:
 
 ```sh
-git clone https://github.com/shabri-arrahim/newsclassifier.git
-cd newsclassifier
+git clone https://github.com/shabri-arrahim/DS01_02_newsclassifier.git
+cd DS01_02_newsclassifier
 ```
 
 Install the prerequisites:
