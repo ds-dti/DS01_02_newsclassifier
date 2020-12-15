@@ -1,14 +1,25 @@
 # Library import
 import uvicorn
-from fastapi import FastAPI
+from fastapi import FastAPI, HTTPException, Request
+from fastapi.templating import Jinja2Templates
+from fastapi.responses import HTMLResponse
 from classifier import Classifier
 from helper import SentimentRequest, SentimentResponse
 
 # Create APP intance of FastAPI
 app = FastAPI()
 model = Classifier()
+templates = Jinja2Templates(directory="templates")
 
 # Index route. Default: http://127.0.0.1:8000
+@app.get("/", response_class=HTMLResponse)
+async def read_item(request: Request):
+    context = {
+        "request" : request,
+        'title' : "Form Input for News Classifier"
+    }
+    return templates.TemplateResponse("index.html", context=context)
+
 @app.post('/predict/', response_model=SentimentResponse, status_code=200)
 async def predict_text(request: SentimentRequest):
 

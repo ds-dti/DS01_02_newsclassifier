@@ -125,3 +125,9 @@ Install the prerequisites:
 ```sh
 pip install requirements.txt
 ```
+
+Run in local:
+```sh
+cd app
+python app.py
+```
