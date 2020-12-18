@@ -1,4 +1,7 @@
 # Automated News Categorization and Sentiment Analysis using Indonesian Bidirectional Encoder Representations from Transformers (IndoBERT) for Technology, Health, and Business Analytics.
+
+![Poster Tubes DTI](https://user-images.githubusercontent.com/54322914/102610527-ee430400-415f-11eb-9a4c-f9300d2a11f6.png)
+
 This reepository is final project which mandatory by Digital Talent Incubator DTI 2020. The purpose of this project is help news anchor or pimred classify their news and know the sentiment of their news
 
 ## About
