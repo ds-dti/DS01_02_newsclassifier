@@ -4,6 +4,8 @@
 
 This reepository is final project which mandatory by Digital Talent Incubator DTI 2020. The purpose of this project is help news anchor or pimred classify their news and know the sentiment of their news
 
+Explanation Video: https://youtu.be/7iDCL7PgnOA
+
 ## About
 
 To make Sustainable Development Goals (SDG) become stronger. Digital Talent Incubator (DTI) which handled by Telkom Indonesia give us project that can be used in the future and solve SDG problems. Our team consists of talented people want to solve problem in SDG 16.
